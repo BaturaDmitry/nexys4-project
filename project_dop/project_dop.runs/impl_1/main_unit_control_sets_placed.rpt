@@ -1,0 +1,90 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Dec  8 17:50:46 2022
+| Host         : DESKTOP-25RL91O running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_unit_control_sets_placed.rpt
+| Design       : main_unit
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    24 |
+| Unused register locations in slices containing registers |    82 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            8 |
+|      8 |            3 |
+|    16+ |           13 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              38 |           13 |
+| No           | No                    | Yes                    |              12 |            5 |
+| No           | Yes                   | No                     |             216 |           29 |
+| Yes          | No                    | No                     |              24 |           10 |
+| Yes          | No                    | Yes                    |             132 |           27 |
+| Yes          | Yes                   | No                     |             192 |           27 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+------------------------------------------------+--------------------------------------+------------------+----------------+
+|  Clock Signal  |                  Enable Signal                 |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++----------------+------------------------------------------------+--------------------------------------+------------------+----------------+
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[6]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[1]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[5]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[7]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[2]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[0]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[4]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | rx_fsm/p_0_in[3]                               |                                      |                1 |              2 |
+|  Clk_IBUF_BUFG | temp_sensor/I2C/Shift_reg0                     |                                      |                2 |              8 |
+|  Clk_IBUF_BUFG | temp_sensor/I2C/Shift_reg0                     | temp_sensor/I2C/Shift_reg[7]_i_1_n_0 |                2 |              8 |
+|  Clk_IBUF_BUFG | temp_sensor/I2C/FSM_sequential_state_reg[0][0] | debounce_reset/SR[0]                 |                2 |              8 |
+|  Clk_IBUF_BUFG | temp_sensor/I2C/E[0]                           | debounce_reset/SR[0]                 |                2 |             16 |
+|  Clk_IBUF_BUFG | temp_sensor/I2C/E[1]                           | debounce_reset/SR[0]                 |                2 |             16 |
+|  Clk_IBUF_BUFG |                                                | baud_rate/count[9]__0_i_1_n_0        |                4 |             18 |
+|  Clk_IBUF_BUFG |                                                | baud_rate/count[13]_i_1_n_0          |                4 |             26 |
+|  Clk_IBUF_BUFG | temp_sensor/I2C/FSM_onehot_state[13]_i_1_n_0   | debounce_reset/SR[0]                 |                7 |             28 |
+|  Clk_IBUF_BUFG |                                                |                                      |               13 |             38 |
+|  Clk_IBUF_BUFG |                                                | debounce_reset/SR[0]                 |               10 |             58 |
+|  Clk_IBUF_BUFG | temp_sensor/I2C/Bit_Cnt0                       | temp_sensor/I2C/Bit_Cnt[31]_i_1_n_0  |                8 |             58 |
+|  Clk_IBUF_BUFG |                                                | count[31]_i_1_n_0                    |                8 |             62 |
+|  Clk_IBUF_BUFG | rx_fsm/baud_cnt0                               | rx_fsm/baud_cnt[31]_i_1_n_0          |                8 |             62 |
+|  Clk_IBUF_BUFG |                                                | temp_sensor/I2C/counter              |                8 |             64 |
+|  Clk_IBUF_BUFG | tx_fsm/bit_cnt[31]_i_1_n_0                     | debounce_reset/SR[0]                 |               14 |             64 |
+|  Clk_IBUF_BUFG | rx_fsm/bit_cnt0                                | rx_fsm/bit_cnt[31]_i_1__0_n_0        |                9 |             64 |
++----------------+------------------------------------------------+--------------------------------------+------------------+----------------+
+
+
